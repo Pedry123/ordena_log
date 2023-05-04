@@ -5,6 +5,10 @@
 #include"comparators.c"
 #include"bubblesort.c"
 
+void insertionsort() {
+    
+}
+
 int main() {
     srand(time(NULL));
     LogRecord* vetor = malloc(sizeof(LogRecord) * NUM_LOG_RECORDS);
@@ -44,7 +48,7 @@ int main() {
         printf("\n\n");
     }
 
-    bubblesort_descending(vetor);
+    //bubblesort_descending(vetor);
     printf("Agora ordenado:\n");
 
     for (int i = 0; i < NUM_LOG_RECORDS; i++) {
