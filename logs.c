@@ -21,6 +21,6 @@ LogRecord* generate_log_record() {
     logRecordUnit->minute = rand() % 60;
     logRecordUnit->second = rand() % 60;
     // Gera um id de processo aleatorio
-    logRecordUnit->process_id = rand() % 100;
+    logRecordUnit->process_id = rand() % 20;
     return logRecordUnit;
 }

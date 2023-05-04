@@ -1,19 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<time.h>
 #include"logs.c"
-#define NUM_LOG_RECORDS 10
-
-void bubblesort(LogRecord* vetor) {
-    for (int i = 0; i < NUM_LOG_RECORDS; i++) {
-        for (int j = 0; j < NUM_LOG_RECORDS - 1; j++) {
-            if (vetor[j].year > vetor[j + 1].year) {
-                LogRecord aux = vetor[j];
-                vetor[j] = vetor[j + 1];
-                vetor[j + 1] = aux;
-            }
-        }
-    }
-}
+#include"comparators.c"
+#include"bubblesort.c"
 
 int main() {
     srand(time(NULL));
@@ -54,7 +44,7 @@ int main() {
         printf("\n\n");
     }
 
-    bubblesort(vetor);
+    bubblesort_descending(vetor);
     printf("Agora ordenado:\n");
 
     for (int i = 0; i < NUM_LOG_RECORDS; i++) {
@@ -71,7 +61,7 @@ int main() {
         printf("%d", vetor[i].second);
         printf("\n");
         printf("%d", vetor[i].process_id);
-        printf("\n");
+        printf("\n\n");
     }
     
     free(x);

@@ -1,3 +1,4 @@
+#define NUM_LOG_RECORDS 10
 typedef struct {
     int year;
     int month;
