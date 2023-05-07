@@ -8,3 +8,18 @@ typedef struct {
     int second;
     int process_id; // id do processo
 } LogRecord;
+
+typedef enum {
+    PROCESS_ID,
+    YEAR,
+    MONTH,
+    DAY,
+    HOUR,
+    MINUTE,
+    SECOND
+} ComparisonCategory;
+
+typedef enum {
+    ASCENDING,
+    DESCENDING
+} Order;

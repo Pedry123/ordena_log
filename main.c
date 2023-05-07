@@ -45,8 +45,8 @@ int main() {
         printf("\n\n");
     }
 
-    insertionsort(vetor);
-    //bubblesort_descending(vetor);
+    //insertionsort(vetor);
+    bubblesort(vetor, DESCENDING);
     printf("Agora ordenado:\n");
 
     for (int i = 0; i < NUM_LOG_RECORDS; i++) {
